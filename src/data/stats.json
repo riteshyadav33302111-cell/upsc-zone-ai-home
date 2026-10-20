@@ -1,0 +1,10 @@
+{
+  "stats": [
+    { "value": 50000, "suffix": "+", "label": "Active aspirants", "note": "placeholder figure" },
+    { "value": 12000, "suffix": "+", "label": "PYQs catalogued", "note": "placeholder figure" },
+    { "value": 98, "suffix": "%", "label": "Syllabus coverage", "note": "placeholder figure" },
+    { "value": 4.8, "suffix": "/5", "label": "Average rating", "note": "placeholder figure", "decimals": 1 }
+  ],
+  "exams": ["UPSC CSE", "IFoS", "CAPF", "State PSCs", "SSC CGL", "Banking", "CDS", "NDA"],
+  "notice": "Sample stories and figures — placeholder content for this design concept"
+}

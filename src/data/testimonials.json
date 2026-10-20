@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ananya",
+    "name": "Ananya",
+    "attempt": "2nd attempt",
+    "quote": "I used to have fourteen browser tabs open and still feel like I was missing something. The Zone gave me one place — and suddenly I knew exactly what to study next.",
+    "feature": "Adaptive Planner",
+    "color": "#5B5BF0"
+  },
+  {
+    "id": "vikram",
+    "name": "Vikram",
+    "attempt": "3rd attempt",
+    "quote": "The mock test explanations actually taught me. Not just 'B is correct' — but why A, C, and D are wrong. That's the difference.",
+    "feature": "AI Mock Tests",
+    "color": "#C8553D"
+  },
+  {
+    "id": "priya",
+    "name": "Priya",
+    "attempt": "1st attempt",
+    "quote": "Current affairs used to feel like drinking from a fire hose. Five minutes a day, mapped to the actual syllabus — I finally feel on top of it.",
+    "feature": "Current Affairs",
+    "color": "#1FAF7A"
+  },
+  {
+    "id": "arjun",
+    "name": "Arjun",
+    "attempt": "2nd attempt",
+    "quote": "PYQ Intelligence showed me that UPSC circles back to the same themes. Once I saw the heatmap, I could focus instead of covering everything blindly.",
+    "feature": "PYQ Intelligence",
+    "color": "#FFC933"
+  },
+  {
+    "id": "meera",
+    "name": "Meera",
+    "attempt": "1st attempt",
+    "quote": "The answer coach doesn't just tell you your score. It marks exactly where your answer lost structure. That's the feedback I never got from test series.",
+    "feature": "Mains Coach",
+    "color": "#5B5BF0"
+  }
+]

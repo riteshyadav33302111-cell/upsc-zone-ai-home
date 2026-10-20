@@ -1,0 +1,32 @@
+[
+  {
+    "id": "free",
+    "question": "Is it free to use?",
+    "answer": "You can start completely free — no card required. The diagnostic, first ten mocks, and a week of current affairs are included. Advanced features unlock on a subscription."
+  },
+  {
+    "id": "exams",
+    "question": "Which exams does UPSC ZONE AI cover?",
+    "answer": "UPSC CSE, IFoS and CAPF are fully supported. We also cover State PSCs (UPPCS, MPPSC, BPSC and more), SSC CGL, Banking (IBPS, SBI), CDS and NDA. More exams are added based on community requests."
+  },
+  {
+    "id": "affiliated",
+    "question": "Is UPSC ZONE AI affiliated with or endorsed by UPSC?",
+    "answer": "No. UPSC ZONE AI is an independent study platform and is not affiliated with, endorsed by, or connected to the Union Public Service Commission or the Government of India. 'UPSC' refers to the examination, not the body."
+  },
+  {
+    "id": "hindi",
+    "question": "Does it work in Hindi?",
+    "answer": "Yes — current affairs briefs, flashcards and study plans are available in Hindi. The interface language toggle (EN / हिं) is in the navigation bar. More content in Hindi is being added continuously."
+  },
+  {
+    "id": "reliability",
+    "question": "How reliable is the AI feedback?",
+    "answer": "The AI is trained on verified UPSC content and gives structured, consistent feedback. It is designed as a study aid: use it alongside your own judgement, standard reference books, and mentors. For factual matters, always cross-check with official sources."
+  },
+  {
+    "id": "offline",
+    "question": "Can I use it offline?",
+    "answer": "Downloaded notes and flashcard decks are available offline. Live features like mock tests, current affairs and answer evaluation need an internet connection."
+  }
+]
