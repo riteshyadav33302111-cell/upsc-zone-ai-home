@@ -1,6 +1,6 @@
 # UPSC ZONE AI — Web Home UI Designer Challenge
 
-> **Designed by Ritesh Yadav**
+> **Live demo:** [https://riteshyadav33302111-cell.github.io/upsc-zone-ai-home/](https://riteshyadav33302111-cell.github.io/upsc-zone-ai-home/)
 
 A standout home page design for **UPSC ZONE AI** — an AI-powered prep platform for UPSC and other competitive exam aspirants.
 
