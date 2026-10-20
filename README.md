@@ -1,83 +1,140 @@
-# UPSC ZONE AI — Web Home UI Designer Challenge
+# UPSC ZONE AI
 
-> **Live demo:** [https://riteshyadav33302111-cell.github.io/upsc-zone-ai-home/](https://riteshyadav33302111-cell.github.io/upsc-zone-ai-home/)
+**An AI-powered preparation platform concept for UPSC and competitive exam aspirants.**
 
-A standout home page design for **UPSC ZONE AI** — an AI-powered prep platform for UPSC and other competitive exam aspirants.
-
----
-
-## ✦ The Concept: THE ZONE
-
-Most edtech pages shout — blue-orange gradients, stock photos, generic card grids. This page is the opposite: **calm intensity**. An editorial, focused study space with AI woven in.
-
-**Scatter → Snap:** The hero animation narrates the journey from scattered chaos (12 open tabs, forgotten PDFs, unreviewed mocks) to one organised "Zone" workspace.
+🔗 **Live Demo:** [Explore UPSC ZONE AI](https://riteshyadav33302111-cell.github.io/upsc-zone-ai-home/)
 
 ---
 
-## 🎨 Design Decisions → Judging Criteria
+## Overview
 
-| Criterion | Decision |
-|-----------|----------|
-| **Creativity & Originality** | Original wordmark SVG, custom topographic motifs, handwriting annotations, highlighter swipe — no templates or stock assets |
-| **UI/UX & Navigation** | Glass-blur sticky nav with scroll-spy, full keyboard support, mobile drawer with focus trap, smooth anchor scrolling |
-| **Visual Appeal** | Two-theme system (Paper + Night Library), editorial Fraunces serif + Manrope grotesk, WCAG AA contrast, paper grain overlay |
-| **UPSC Relevance** | Live MCQ with Constitution content, PYQ heatmap, Mains answer coach, Hindi whisper line, syllabus-tagged current affairs |
-| **Responsiveness** | 12-col grid, fluid type scale with clamp(), tap targets ≥ 44px, tested 360px–1920px |
+UPSC ZONE AI is a modern homepage UI concept designed to make competitive exam preparation feel more organized, focused, and accessible.
 
-### Signature Motifs
-1. **Highlighter swipe** — key words get a drawn-on marker underline on reveal
-2. **Contour lines** — topographic SVG texture (the syllabus as terrain you climb)
-3. **Margin notes** — AI feedback as handwritten Caveat annotations
-4. **Focus ring** — the "O" of ZONE reused for progress, loaders, buttons, favicon
-5. **Paper grain** — 3% noise overlay for tactile feel
+Built around the idea of **"THE ZONE"**, the interface combines editorial typography, subtle animations, interactive learning elements, and a dual-theme experience to create a distinctive edtech design.
 
----
+Instead of overwhelming students with information, the design emphasizes clarity, focus, and a structured preparation journey.
 
-## ⚡ Tech Stack
+## ✨ Highlights
 
-- **Vite 8** + **React 18** + **TypeScript** (strict)
-- **Tailwind CSS v4** with CSS custom property tokens
-- **Framer Motion** — spring physics, staggered reveals, 60fps
-- **lucide-react** — all icons
-- **@fontsource** — self-hosted Fraunces, Manrope, JetBrains Mono, Caveat, Noto Sans
+* **Distinctive UI:** Editorial layouts, custom SVG illustrations, paper textures, and handwritten annotations.
+* **Interactive Hero:** A visual transition from scattered study materials to an organized learning workspace.
+* **Dual Themes:** Switch between Paper and Night Library modes.
+* **Interactive MCQs:** Constitution-based sample questions with an engaging interface.
+* **PYQ Heatmap:** A visual representation of previous-year question trends.
+* **Mains Answer Coach:** An interface concept for AI-assisted answer improvement.
+* **Current Affairs:** Syllabus-oriented current affairs presentation.
+* **Responsive Layout:** Designed to adapt to mobile, tablet, and desktop screens.
+* **Smooth Animations:** Scroll reveals, interactive transitions, and animated UI elements.
+* **Accessible Navigation:** Keyboard-friendly interactions and clear navigation patterns.
 
----
+## 🎨 Design Philosophy
 
-## 🚀 Run Locally
+### THE ZONE
+
+The visual identity draws inspiration from editorial publications, academic notebooks, and focused study environments.
+
+Key design elements include:
+
+* **Highlighter Swipes:** Emphasize important words and headings.
+* **Topographic Patterns:** Represent the journey through a vast syllabus.
+* **Handwritten Notes:** Add a personal, notebook-inspired touch.
+* **Focus Ring:** A recurring visual element inspired by the ZONE wordmark.
+* **Paper Grain:** Subtle texture that gives the interface a tactile feel.
+
+The result is a calm, premium aesthetic designed to keep attention on learning rather than visual clutter.
+
+## 🛠️ Tech Stack
+
+| Technology      | Purpose                                 |
+| --------------- | --------------------------------------- |
+| React 18        | Component-based UI development          |
+| TypeScript      | Type safety and maintainable code       |
+| Vite 8          | Development server and build tooling    |
+| Tailwind CSS v4 | Responsive styling and design utilities |
+| Framer Motion   | Animations and interactive transitions  |
+| Lucide React    | Interface icons                         |
+| Fontsource      | Self-hosted typography                  |
+
+**Typography:** Fraunces, Manrope, JetBrains Mono, Caveat, and Noto Sans.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+* Node.js
+* npm
+* Git
+
+### Installation
+
+**1. Clone the repository**
 
 ```bash
-git clone https://github.com/<your-username>/upsc-zone-ai-home.git
+git clone https://github.com/riteshyadav33302111-cell/upsc-zone-ai-home.git
+```
+
+**2. Navigate to the project directory**
+
+```bash
 cd upsc-zone-ai-home
+```
+
+**3. Install dependencies**
+
+```bash
 npm install
+```
+
+**4. Start the development server**
+
+```bash
 npm run dev
 ```
 
----
+Open the local URL displayed in your terminal to explore the application.
 
-## 📁 Project Structure
+### Production Build
 
+To create an optimized production build:
+
+```bash
+npm run build
 ```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## 📂 Project Structure
+
+```text
 src/
-├── components/sections/   # All page sections
-├── data/                  # Testimonials, FAQ, stats (placeholder — swap with real data)
-├── hooks/                 # useTheme, useScrollReveal, useCountUp, useScrollSpy
-└── styles/globals.css     # Design tokens, typography, utilities
+├── components/
+│   └── sections/       # Homepage sections and UI components
+├── data/               # Sample content, FAQs, testimonials, and stats
+├── hooks/              # Reusable React hooks
+└── styles/
+    └── globals.css     # Design tokens, typography, and global styles
 ```
 
+## 📌 Project Status
+
+This repository focuses on the **frontend homepage and user interface experience**.
+
+Some content, including testimonials and statistics, uses clearly identified placeholder data. Interactive learning sections represent UI concepts and should not be assumed to provide production-ready AI services.
+
+## ⚖️ Disclaimer
+
+UPSC ZONE AI is an independent project concept and is not affiliated with the Union Public Service Commission (UPSC) or the Government of India.
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
 ---
 
-## 📝 Content Notice
+**Designed and developed by Ritesh Yadav**
 
-All testimonials and statistics are **placeholder content, clearly labelled**. Uses fictional first names and attempt numbers only — no real names, no claimed ranks.
-
----
-
-## ⚖ Legal
-
-**UPSC ZONE AI is an independent platform and is not affiliated with the Union Public Service Commission or the Government of India.**
-
-All content is 100% original. No copyrighted assets. No stock photos.
-
----
-
-**Designed by Ritesh Yadav** · MIT License
+[GitHub](https://github.com/riteshyadav33302111-cell) · [LinkedIn](https://www.linkedin.com/in/ritesh-yadav-6575573a9)
