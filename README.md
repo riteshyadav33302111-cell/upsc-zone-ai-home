@@ -1,8 +1,8 @@
-# UPSC ZONE AI
+<img width="1535" height="863" alt="image" src="https://github.com/user-attachments/assets/8d5b0cdf-6898-4199-9a2f-ccd3ac31ffe1" /># UPSC ZONE AI
 
 **An AI-powered preparation platform concept for UPSC and competitive exam aspirants.**
 
-🔗 **Live Demo:** [Explore UPSC ZONE AI](https://riteshyadav33302111-cell.github.io/upsc-zone-ai-home/)
+🔗 **Live Demo:** [Explore UPSC ZONE AI](https://upsc-zone-ai-home.vercel.app/)
 
 ---
 
