@@ -301,16 +301,6 @@ export default function Navbar() {
         )}
       </AnimatePresence>
 
-      <style>{`
-        @media (max-width: 768px) {
-          .nav-links-desktop { display: none !important; }
-          .mobile-menu-btn { display: flex !important; }
-          header nav > a:nth-child(3) { display: none !important; }
-        }
-        @media (min-width: 769px) {
-          .mobile-menu-btn { display: none !important; }
-        }
-      `}</style>
     </>
   )
 }

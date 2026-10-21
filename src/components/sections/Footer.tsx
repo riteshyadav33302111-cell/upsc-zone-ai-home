@@ -108,14 +108,8 @@ export default function Footer({ isDark }: { isDark: boolean }) {
       </div>
 
       <div className="container" style={{ position: 'relative', paddingTop: '4rem', paddingBottom: '2rem' }}>
-        {/* Top section */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr auto',
-          gap: '3rem',
-          marginBottom: '3rem',
-          alignItems: 'start',
-        }} className="footer-top">
+        {/* Top section — layout via .footer-top CSS class */}
+        <div className="footer-top">
           {/* Brand + email signup */}
           <div style={{ maxWidth: '420px' }}>
             {/* Wordmark */}
@@ -252,16 +246,8 @@ export default function Footer({ isDark }: { isDark: boolean }) {
           </div>
         </div>
 
-        {/* Nav columns */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(4, 1fr)',
-          gap: '2rem',
-          borderTop: '1px solid',
-          borderColor: isDark ? 'var(--border)' : '#1E2A3A',
-          paddingTop: '2rem',
-          marginBottom: '2.5rem',
-        }} className="footer-cols">
+        {/* Nav columns — layout via .footer-cols CSS class */}
+        <div className="footer-cols">
           {Object.entries(FOOTER_LINKS).map(([section, links]) => (
             <div key={section}>
               <p style={{
@@ -302,17 +288,8 @@ export default function Footer({ isDark }: { isDark: boolean }) {
           ))}
         </div>
 
-        {/* Bottom bar */}
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          flexWrap: 'wrap',
-          gap: '1rem',
-          borderTop: '1px solid',
-          borderColor: isDark ? 'var(--border)' : '#1E2A3A',
-          paddingTop: '1.5rem',
-        }}>
+        {/* Bottom bar — layout via .footer-bottom CSS class */}
+        <div className="footer-bottom">
           <div>
             <p style={{ fontSize: '0.78rem', color: isDark ? 'var(--text-subtle)' : '#6B6560', lineHeight: 1.6 }}>
               UPSC ZONE AI is an independent platform and is not affiliated with the Union Public Service Commission or the Government of India.

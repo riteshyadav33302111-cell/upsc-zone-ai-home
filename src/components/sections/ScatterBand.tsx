@@ -46,14 +46,7 @@ export default function ScatterBand() {
           <span style={{ color: 'var(--accent-warm)' }}>They lack a system.</span>
         </motion.p>
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '1.5rem',
-          }}
-          className="pains-grid"
-        >
+        <div className="pains-grid">
           {PAINS.map((pain, i) => (
             <motion.div
               key={i}
@@ -81,9 +74,6 @@ export default function ScatterBand() {
         </div>
       </div>
 
-      <style>{`
-        @media (max-width: 650px) { .pains-grid { grid-template-columns: 1fr !important; } }
-      `}</style>
     </section>
   )
 }

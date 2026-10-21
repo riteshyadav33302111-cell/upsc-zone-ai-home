@@ -245,14 +245,11 @@ export default function SocialProof() {
 
         {/* Stats strip */}
         <div
+          className="stats-grid"
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(4, 1fr)',
-            gap: '1.5rem',
             borderTop: '1px solid var(--border)',
             paddingTop: '2.5rem',
           }}
-          className="stats-grid"
         >
           {statsData.stats.map((stat) => (
             <StatItem key={stat.label} stat={stat} />
@@ -260,10 +257,6 @@ export default function SocialProof() {
         </div>
       </div>
 
-      <style>{`
-        @media (max-width: 700px) { .stats-grid { grid-template-columns: 1fr 1fr !important; } }
-        @media (max-width: 400px) { .stats-grid { grid-template-columns: 1fr !important; } }
-      `}</style>
     </section>
   )
 }

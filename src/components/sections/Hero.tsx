@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight, Zap, RotateCcw, Target, Brain, BookOpen, TrendingUp, Flame, MessageSquare } from 'lucide-react'
 
 const CHAOS_CARDS = [
-  { id: 'tabs', label: '12 tabs open', x: -200, y: -100, rotate: -12, blur: 3 },
-  { id: 'notes', label: 'notes_final_v7(2).pdf', x: 160, y: -140, rotate: 8, blur: 2 },
-  { id: 'pyq', label: 'PYQ 2019 — unsolved', x: -180, y: 70, rotate: -6, blur: 2.5 },
-  { id: 'art21', label: 'Revise Art. 21', x: 200, y: 50, rotate: 12, blur: 2 },
-  { id: 'mock', label: 'Mock 14: 62/200 — why?', x: -40, y: 140, rotate: -8, blur: 3 },
-  { id: 'editorial', label: 'Editorial backlog: 9 days', x: 120, y: 120, rotate: 5, blur: 2 },
+  { id: 'tabs', label: '12 tabs open', x: -180, y: -90, rotate: -12, blur: 3 },
+  { id: 'notes', label: 'notes_final_v7(2).pdf', x: 150, y: -120, rotate: 8, blur: 2 },
+  { id: 'pyq', label: 'PYQ 2019 — unsolved', x: -160, y: 60, rotate: -6, blur: 2.5 },
+  { id: 'art21', label: 'Revise Art. 21', x: 170, y: 40, rotate: 12, blur: 2 },
+  { id: 'mock', label: 'Mock 14: 62/200 — why?', x: -30, y: 120, rotate: -8, blur: 3 },
+  { id: 'editorial', label: 'Editorial backlog: 9d', x: 100, y: 110, rotate: 5, blur: 2 },
 ]
 
 const ZONE_MODULES = [
@@ -57,7 +57,8 @@ export default function Hero() {
       </svg>
 
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }} className="hero-grid">
+        {/* hero-grid class handles responsive layout via CSS */}
+        <div className="hero-grid">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}>
             <div className="chip" style={{ marginBottom: '1.5rem', display: 'inline-flex' }}>
               <Zap size={12} style={{ color: 'var(--accent)' }} />
@@ -68,7 +69,7 @@ export default function Hero() {
               <span className="highlighter revealed">zone.</span>
               <br />Until the rank is yours.
             </h1>
-            <p style={{ fontFamily: 'var(--font-hand)', fontSize: '1.1rem', color: 'var(--accent-warm)', marginBottom: '1.25rem', opacity: 0.9 }} lang="hi">
+            <p style={{ fontFamily: 'var(--font-hand)', fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: 'var(--accent-warm)', marginBottom: '1.25rem', opacity: 0.9 }} lang="hi">
               लक्ष्य तय है, फ़ोकस बनाए रखिए।
             </p>
             <p className="text-body-lg" style={{ color: 'var(--text-muted)', marginBottom: '2rem', maxWidth: '500px' }}>
@@ -82,10 +83,11 @@ export default function Hero() {
                 See how it works
               </a>
             </div>
-            <p style={{ fontSize: '0.78rem', color: 'var(--text-subtle)', fontFamily: 'var(--font-mono)' }}>FREE TO START · NO CARD NEEDED</p>
+            <p style={{ fontSize: '0.75rem', color: 'var(--text-subtle)', fontFamily: 'var(--font-mono)' }}>FREE TO START · NO CARD NEEDED</p>
           </motion.div>
 
-          <div style={{ position: 'relative', height: '420px' }}>
+          {/* hero-visual class handles responsive height via CSS */}
+          <div className="hero-visual" style={{ position: 'relative' }}>
             <AnimatePresence mode="wait" key={replayKey}>
               {!snapped ? (
                 <div key="chaos" aria-hidden="true" style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -95,7 +97,7 @@ export default function Hero() {
                       animate={{ opacity: 1, x: card.x, y: card.y, rotate: card.rotate }}
                       exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.3 } }}
                       transition={{ delay: i * 0.1, type: 'spring', stiffness: 180, damping: 18 }}
-                      style={{ position: 'absolute', background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: '0.5rem', padding: '0.5rem 0.875rem', fontSize: '0.78rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', whiteSpace: 'nowrap', filter: `blur(${card.blur}px)`, boxShadow: 'var(--shadow)' }}
+                      style={{ position: 'absolute', background: 'var(--bg-surface)', border: '1px solid var(--border)', borderRadius: '0.5rem', padding: '0.4rem 0.75rem', fontSize: '0.72rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', whiteSpace: 'nowrap', filter: `blur(${card.blur}px)`, boxShadow: 'var(--shadow)' }}
                     >{card.label}</motion.div>
                   ))}
                 </div>
@@ -104,25 +106,25 @@ export default function Hero() {
                   initial={reducedMotion ? false : { opacity: 0, scale: 0.92 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ type: 'spring', stiffness: 260, damping: 28 }}
-                  style={{ position: 'absolute', inset: 0, display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: 'auto repeat(3, 1fr)', gap: '0.625rem', padding: '1rem', background: 'var(--bg-surface)', borderRadius: '1.25rem', border: '1px solid var(--border)', boxShadow: '0 8px 40px -8px rgba(91,91,240,0.18)' }}
+                  style={{ position: 'absolute', inset: 0, display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: 'auto repeat(3, 1fr)', gap: '0.5rem', padding: '0.875rem', background: 'var(--bg-surface)', borderRadius: '1.25rem', border: '1px solid var(--border)', boxShadow: '0 8px 40px -8px rgba(91,91,240,0.18)' }}
                   aria-label="Your Zone dashboard"
                 >
-                  <div style={{ gridColumn: '1/-1', display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '0.625rem', borderBottom: '1px solid var(--border)', marginBottom: '0' }}>
-                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--accent)', letterSpacing: '0.12em' }}>YOUR ZONE</span>
-                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6rem', color: 'var(--text-subtle)' }}>Today</span>
+                  <div style={{ gridColumn: '1/-1', display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '0.5rem', borderBottom: '1px solid var(--border)' }}>
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6rem', color: 'var(--accent)', letterSpacing: '0.12em' }}>YOUR ZONE</span>
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.55rem', color: 'var(--text-subtle)' }}>Today</span>
                   </div>
                   {ZONE_MODULES.map((mod, i) => (
                     <motion.div key={mod.id}
                       initial={reducedMotion ? false : { opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.1 + i * 0.07, type: 'spring', stiffness: 300, damping: 26 }}
-                      style={{ background: 'var(--bg-surface2)', borderRadius: '0.625rem', padding: '0.75rem', display: 'flex', flexDirection: 'column', gap: '0.3rem', border: '1px solid var(--border)' }}
+                      style={{ background: 'var(--bg-surface2)', borderRadius: '0.5rem', padding: '0.625rem', display: 'flex', flexDirection: 'column', gap: '0.25rem', border: '1px solid var(--border)', minHeight: 0 }}
                     >
-                      <div style={{ width: '24px', height: '24px', borderRadius: '50%', background: `${mod.color}20`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <mod.icon size={12} style={{ color: mod.color }} />
+                      <div style={{ width: '20px', height: '20px', borderRadius: '50%', background: `${mod.color}20`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                        <mod.icon size={10} style={{ color: mod.color }} />
                       </div>
-                      <span style={{ fontSize: '0.72rem', fontWeight: 600, color: 'var(--text)' }}>{mod.label}</span>
-                      <div style={{ height: '3px', background: 'var(--border)', borderRadius: '2px' }}>
+                      <span style={{ fontSize: '0.65rem', fontWeight: 600, color: 'var(--text)', lineHeight: 1.2, wordBreak: 'break-word' }}>{mod.label}</span>
+                      <div style={{ height: '3px', background: 'var(--border)', borderRadius: '2px', marginTop: 'auto' }}>
                         <div style={{ width: `${40 + i * 10}%`, height: '100%', background: mod.color, borderRadius: '2px' }} />
                       </div>
                     </motion.div>
@@ -132,8 +134,8 @@ export default function Hero() {
             </AnimatePresence>
             {snapped && (
               <motion.button initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}
-                onClick={replay} aria-label="Replay scatter to zone animation"
-                style={{ position: 'absolute', bottom: '-2rem', right: 0, display: 'flex', alignItems: 'center', gap: '0.375rem', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-subtle)', fontSize: '0.72rem', fontFamily: 'var(--font-mono)', padding: '0.5rem' }}
+                onClick={replay} aria-label="Replay animation"
+                style={{ position: 'absolute', bottom: '-2rem', right: 0, display: 'flex', alignItems: 'center', gap: '0.375rem', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-subtle)', fontSize: '0.7rem', fontFamily: 'var(--font-mono)', padding: '0.5rem' }}
               >
                 <RotateCcw size={11} /> replay
               </motion.button>
@@ -142,22 +144,15 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="marquee-wrap" style={{ marginTop: '4rem', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '0.875rem 0', overflow: 'hidden' }} aria-label="Exams covered">
+      <div className="marquee-wrap" style={{ marginTop: '3.5rem', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '0.75rem 0', overflow: 'hidden' }} aria-label="Exams covered">
         <div className="marquee-track" style={{ display: 'flex', gap: '3rem', width: 'max-content' }}>
           {[...EXAMS, ...EXAMS, ...EXAMS, ...EXAMS].map((exam, i) => (
-            <span key={i} style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', letterSpacing: '0.15em', color: 'var(--text-subtle)', display: 'flex', alignItems: 'center', gap: '1rem', whiteSpace: 'nowrap' }}>
-              {exam}<span style={{ opacity: 0.3, fontSize: '0.5rem' }}>◆</span>
+            <span key={i} style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', letterSpacing: '0.15em', color: 'var(--text-subtle)', display: 'flex', alignItems: 'center', gap: '1rem', whiteSpace: 'nowrap' }}>
+              {exam}<span style={{ opacity: 0.3, fontSize: '0.45rem' }}>◆</span>
             </span>
           ))}
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 768px) {
-          .hero-grid { grid-template-columns: 1fr !important; }
-          .hero-grid > div:last-child { height: 280px !important; }
-        }
-      `}</style>
     </section>
   )
 }

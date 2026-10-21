@@ -119,14 +119,7 @@ export default function HowItWorks() {
           </svg>
 
           {/* Step cards */}
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: '1.5rem',
-            }}
-            className="steps-grid"
-          >
+          <div className="steps-grid">
             {STEPS.map((step, i) => (
               <motion.div
                 key={step.id}
@@ -176,11 +169,6 @@ export default function HowItWorks() {
         </div>
       </div>
 
-      <style>{`
-        @media (max-width: 700px) {
-          .steps-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </section>
   )
 }
