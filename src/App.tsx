@@ -1,18 +1,38 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, lazy, Suspense } from 'react'
 import { useTheme } from './hooks/useTheme'
 import Navbar from './components/sections/Navbar'
 import Hero from './components/sections/Hero'
-import ScatterBand from './components/sections/ScatterBand'
-import Features from './components/sections/Features'
-import HowItWorks from './components/sections/HowItWorks'
-import FindYourZone from './components/sections/FindYourZone'
-import SocialProof from './components/sections/SocialProof'
-import FAQ from './components/sections/FAQ'
-import FinalCTA from './components/sections/FinalCTA'
-import Footer from './components/sections/Footer'
+
+// Lazy-load all below-fold sections — deferred until after hero renders
+// This dramatically reduces initial JS parse time (TBT)
+const ScatterBand  = lazy(() => import('./components/sections/ScatterBand'))
+const Features     = lazy(() => import('./components/sections/Features'))
+const HowItWorks   = lazy(() => import('./components/sections/HowItWorks'))
+const FindYourZone = lazy(() => import('./components/sections/FindYourZone'))
+const SocialProof  = lazy(() => import('./components/sections/SocialProof'))
+const FAQ          = lazy(() => import('./components/sections/FAQ'))
+const FinalCTA     = lazy(() => import('./components/sections/FinalCTA'))
+const Footer       = lazy(() => import('./components/sections/Footer'))
+
+// Minimal section skeleton shown while lazy chunks load
+function SectionSkeleton() {
+  return (
+    <div
+      aria-hidden="true"
+      style={{
+        minHeight: '4rem',
+        background: 'var(--bg-surface2)',
+        borderRadius: '1rem',
+        margin: '2rem auto',
+        maxWidth: '1240px',
+        opacity: 0.4,
+      }}
+    />
+  )
+}
 
 export default function App() {
-  const { theme, isDark } = useTheme()
+  const { isDark } = useTheme()
   const lampRef = useRef<HTMLDivElement>(null)
 
   // Night library lamp cursor effect
@@ -41,17 +61,36 @@ export default function App() {
       <Navbar />
 
       <main id="main-content">
+        {/* Hero loads eagerly — above the fold */}
         <Hero />
-        <ScatterBand />
-        <Features />
-        <HowItWorks />
-        <FindYourZone />
-        <SocialProof />
-        <FAQ />
-        <FinalCTA />
+
+        {/* Everything below is lazy — loaded after hero paints */}
+        <Suspense fallback={<SectionSkeleton />}>
+          <ScatterBand />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <Features />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <HowItWorks />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <FindYourZone />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <SocialProof />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <FAQ />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <FinalCTA />
+        </Suspense>
       </main>
 
-      <Footer isDark={isDark} />
+      <Suspense fallback={null}>
+        <Footer isDark={isDark} />
+      </Suspense>
     </>
   )
 }

@@ -4,17 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- FOUC prevention: set theme before any paint -->
+    <script>
+      (function() {
+        var t = localStorage.getItem('upsc-zone-theme');
+        document.documentElement.setAttribute('data-theme', t === 'night' ? 'night' : 'paper');
+      })();
+    </script>
+
     <!-- Primary Meta -->
     <title>UPSC ZONE AI — Stay in the Zone. Until the Rank is Yours.</title>
     <meta name="description" content="AI-powered UPSC prep: adaptive mock tests, daily current affairs, smart notes and every PYQ — organised into one calm, focused workspace that adapts to you." />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://riteshyadav.github.io/upsc-zone-ai-home/" />
+    <link rel="canonical" href="https://riteshyadav33302111-cell.github.io/upsc-zone-ai-home/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="UPSC ZONE AI — Stay in the Zone. Until the Rank is Yours." />
     <meta property="og:description" content="AI mock tests, daily current affairs, smart notes and every PYQ — organised into one calm, focused workspace." />
-    <meta property="og:url" content="https://riteshyadav.github.io/upsc-zone-ai-home/" />
+    <meta property="og:url" content="https://riteshyadav33302111-cell.github.io/upsc-zone-ai-home/" />
     <meta property="og:image" content="./og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -29,23 +37,14 @@
     <meta name="theme-color" content="#FBF7EF" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0D0F14" media="(prefers-color-scheme: dark)" />
 
-    <!-- Favicon: inline SVG -->
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
 
-    <!-- Preconnect (self-hosted fonts via @fontsource, no external preconnect needed) -->
+    <!-- DNS prefetch for nothing (all fonts are self-hosted via @fontsource) -->
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-
-    <!-- Inline theme init to prevent FOUC -->
-    <script>
-      (function() {
-        var stored = localStorage.getItem('upsc-zone-theme');
-        var theme = stored === 'night' ? 'night' : 'paper';
-        document.documentElement.setAttribute('data-theme', theme);
-      })();
-    </script>
   </body>
 </html>

@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* Force font-display: swap on all @fontsource faces to prevent render-blocking */
+@font-face { font-family: 'Manrope'; font-display: swap; src: local(''); }
+@font-face { font-family: 'Fraunces'; font-display: swap; src: local(''); }
+@font-face { font-family: 'JetBrains Mono'; font-display: swap; src: local(''); }
+@font-face { font-family: 'Caveat'; font-display: swap; src: local(''); }
+@font-face { font-family: 'Noto Sans Devanagari'; font-display: swap; src: local(''); }
+
 @theme {
   --color-paper: #FBF7EF;
   --color-ink: #0B1220;
