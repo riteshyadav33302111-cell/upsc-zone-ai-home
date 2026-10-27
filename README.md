@@ -8,8 +8,7 @@
 
 ## Overview
 
-UPSC ZONE AI is a modern homepage UI concept designed to make competitive exam preparation feel more organized, focused, and accessible.
-
+UPSC ZONE AI is a modern homepage UI concept designed to make competitive exam preparation feel more organized, focused, and accessible. It is 
 Built around the idea of **"THE ZONE"**, the interface combines editorial typography, subtle animations, interactive learning elements, and a dual-theme experience to create a distinctive edtech design.
 
 Instead of overwhelming students with information, the design emphasizes clarity, focus, and a structured preparation journey.
